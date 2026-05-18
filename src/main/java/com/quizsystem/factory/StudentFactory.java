@@ -20,7 +20,7 @@ import java.util.Map;
 public class StudentFactory {
 
     // Cache to store already created students
-    private static final Map<String, Student> studentCache = new HashMap<>();
+    //private static final Map<String, Student> studentCache = new HashMap<>();
 
     /**
      * Factory method to create or retrieve a {@link Student}.

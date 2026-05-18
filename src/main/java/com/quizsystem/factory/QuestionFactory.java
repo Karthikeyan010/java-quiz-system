@@ -14,6 +14,11 @@ import java.util.Set;
  */
 public class QuestionFactory {
 
+    // Since this class has only static members I add a private constructor to prevent creating unnessary QuestionFactory object
+    private QuestionFactory() {
+        throw new UnsupportedOperationException("Utility class");
+    }
+
     /**
      * Factory method to create a {@link FreeResponseQuestion}.
      *

@@ -18,8 +18,8 @@ import java.util.Set;
 public class FreeResponseQuestion implements Question {
     private final String question; // The question text
     private final String correctAnswer; // The correct answer for the question
-    private static final Map<String, FreeResponseQuestion> questionCache = new HashMap<>();
-
+    private static final Map<String, FreeResponseQuestion> questionCache = new HashMap<>();// used static Map as a cahe , so if the same free response question is created again, the system can return the existing object instead of creating a duplicate
+// if the system became multi-threaded, I would replace HashMap with ConcurrentHashMap for the cache forr thread safety
     /**
      * Constructor for FreeResponseQuestion.
      *
@@ -86,6 +86,9 @@ public class FreeResponseQuestion implements Question {
  * @return true if the answer is correct, false otherwise
  */
     public boolean isCorrectAnswer(String answer) {
+        if (answer == null) {
+            return false;
+        }
         // Case-insensitive comparison
         return correctAnswer.equalsIgnoreCase(answer.trim());
     }

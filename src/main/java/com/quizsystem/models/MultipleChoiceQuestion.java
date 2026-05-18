@@ -23,8 +23,8 @@ public class MultipleChoiceQuestion implements Question {
      */
     private MultipleChoiceQuestion(String questionText, Set<String> options, Set<String> correctAnswers) {
         this.questionText = questionText;
-        this.options = options;
-        this.correctAnswers = correctAnswers;
+        this.options = options;// Set.copyOf(options);
+        this.correctAnswers = correctAnswers;//Set.copyOf(correctAnswers);
     }
 
     /**
@@ -99,7 +99,7 @@ public class MultipleChoiceQuestion implements Question {
      * @return the set of correct answers
      */
     public Set<String> getCorrectAnswers() {
-        return correctAnswers;
+        return correctAnswers;//Set.copOf(correctAnswers)
     }
 }
 

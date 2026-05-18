@@ -45,6 +45,7 @@ public class Student {
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = new Date(dateOfBirth.getTime()); // Ensure immutability
+        //Because Date is mutable. If I directly stored or returned the original Date, another class could modify it and change the student’s identity. Defensive copying protects the internal state.
 
         this.finalVerdict = Verdict.TBD; // Initial verdict
         this.quizAttempts = 0;
@@ -64,6 +65,11 @@ public class Student {
      * @return a Student instance, either new or from the cache
      */
     public static Student valueOf(String firstName, String lastName, Date dateOfBirth) {
+        if (firstName == null || firstName.isBlank() ||
+                lastName == null || lastName.isBlank() ||
+                dateOfBirth == null) {
+            throw new IllegalArgumentException("Student details cannot be null or blank");
+        }
         String key = firstName + lastName + dateOfBirth.getTime(); // Unique key for cache
 
         return studentCache.computeIfAbsent(key, k -> new Student(firstName, lastName, dateOfBirth));
