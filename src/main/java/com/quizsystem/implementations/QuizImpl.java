@@ -15,7 +15,7 @@ import java.util.*;
  */
 public class QuizImpl implements QuizGenerator {
     // Pool of available questions
-    public List<Question> questionPool = QuestionPoolManager.getInstance().getQuestionPool();
+    public  List<Question> questionPool = QuestionPoolManager.getInstance().getQuestionPool();
 
     /**
      * Constructs a {@code QuizImpl} instance with the specified question pool.

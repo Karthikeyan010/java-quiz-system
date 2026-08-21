@@ -6,6 +6,10 @@ import com.quizsystem.models.MultipleChoiceQuestion;
 import java.util.Set;
 
 /**
+ * The factory package contains classes responsible for object creation.
+ * QuestionFactory creates question objects, and StudentFactory creates student objects.
+ * I used this so object creation is controlled in one place, where validation and caching can also be handled.
+ *
  * The {@code QuestionFactory} class provides factory methods for creating
  * instances of {@link FreeResponseQuestion} and {@link MultipleChoiceQuestion}.
  *

@@ -4,10 +4,16 @@ import com.quizsystem.interfaces.Question;
 
 import java.util.Set;
 
-/**
- * Represents a multiple-choice question with a question text, possible options, and correct answers.
+/**correct answers.
  * This class implements the {@link Question} interface and provides methods to create, retrieve,
  * and validate multiple-choice questions.
+ * MultipleChoiceQuestion is a model class that represents questions
+ *with multiple options and one or more correct answers.
+ *It implements the Question interface, so it follows a common contract used across the quiz system.
+ *I used a private constructor and a static valueOf() method to control object creation and validate
+ *inputs before creating the object. I used Set for options and correct answers because duplicates
+ *should not exist and answer order should not matter. The class supports both single-answer and
+ *multiple-answer validation through overloaded isCorrectAnswer() methods.
  */
 public class MultipleChoiceQuestion implements Question {
     private String questionText; // The text of the question
@@ -20,6 +26,7 @@ public class MultipleChoiceQuestion implements Question {
      * @param questionText the text of the question
      * @param options      the possible options for the question
      * @param correctAnswers the correct answer(s) for the question
+
      */
     private MultipleChoiceQuestion(String questionText, Set<String> options, Set<String> correctAnswers) {
         this.questionText = questionText;

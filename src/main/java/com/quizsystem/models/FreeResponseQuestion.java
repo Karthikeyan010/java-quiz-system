@@ -11,6 +11,11 @@ import java.util.Set;
 
 
 /**
+ * The models package contains the core domain objects of the system.
+ * These are the main entities, such as Student, FreeResponseQuestion,
+ * MultipleChoiceQuestion, and Verdict. These classes represent the actual
+ * data and behaviour used in the quiz system.
+ *
  * Represents a free response question with a question text and a correct answer.
  * This class implements the {@link Question} interface and provides methods
  * to create, retrieve, and validate free response questions.
@@ -54,11 +59,11 @@ public class FreeResponseQuestion implements Question {
         if (questionCache.containsKey(key)) {
             return questionCache.get(key); // Return the existing question
         } else {
-            // Create a new question and add to the cache
             FreeResponseQuestion newQuestion = new FreeResponseQuestion(question, correctAnswer);
             questionCache.put(key, newQuestion);
             return newQuestion;
-        }
+        }  // Create a new question and add to the cache
+
     }
 
     /**

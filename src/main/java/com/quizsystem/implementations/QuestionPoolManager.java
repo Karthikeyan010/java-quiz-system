@@ -16,6 +16,11 @@ import java.util.List;
 import java.util.Set;
 
 /**
+ * The implementations package contains the actual business logic.
+ * QuestionPoolManager manages the pool of available questions,
+ * QuizImpl handles quiz generation, answer evaluation, revision handling, and statistics flow,
+ * and StatisticsProviderImpl provides the implementation for generating student statistics.
+ *
  * The {@code QuestionPoolManager} class manages a pool of questions used in quizzes.
  * It allows adding different types of questions, retrieving the question pool,
  * removing specific questions, and clearing the entire pool. This class follows
