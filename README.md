@@ -38,3 +38,57 @@ The application provides a foundation for creating and managing quizzes with dif
 
 
 
+
+
+\## Tech Stack
+
+
+
+\* \*\*Java 21\*\* — core application development
+
+\* \*\*Maven\*\* — dependency management and build automation
+
+\* \*\*JUnit 5\*\* — primary unit-testing framework
+
+\* \*\*JUnit 4\*\* — support for existing legacy tests
+
+\* \*\*Git\*\* — version control
+
+\* \*\*GitHub\*\* — source-code hosting and project management
+
+
+
+\## Prerequisites
+
+
+
+To build and test the project locally, install:
+
+
+
+\* Java Development Kit (JDK) 21
+
+\* Apache Maven
+
+\* Git
+
+
+
+Verify the required tools are available:
+
+
+
+```bash
+
+java -version
+
+mvn -version
+
+git --version
+
+```
+
+
+
+
+
