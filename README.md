@@ -36,10 +36,6 @@ The application provides a foundation for creating and managing quizzes with dif
 
 
 
-
-
-
-
 \## Tech Stack
 
 
@@ -87,8 +83,6 @@ mvn -version
 git --version
 
 ```
-
-
 
 
 
@@ -183,8 +177,6 @@ src/
 \* `models` — contains the domain objects representing questions, students, and verdicts.
 
 \* `test` — contains automated tests for the main application components.
-
-
 
 
 
